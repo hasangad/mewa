@@ -1,0 +1,1364 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>المهام</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="css/img/fav-icon.png" />
+
+
+
+        <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&amp;subset=arabic" rel="stylesheet">
+
+
+
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+       <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.min.css"/>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+    </head>
+
+    <body>
+
+    	<header>
+
+    		<div class="container-fluid">
+
+    			<div class="row">
+
+    				<div class="col-md-6">
+
+    					<div class="title-admin">
+
+    						<p>نظام تسجيل ومتابعة المهام الاستراتيجية</p>
+
+    					</div>
+
+    				</div>
+
+    				<div class="col-md-6 text-left">
+
+    					<div class="color">
+
+    						<ul>
+
+    							<li><a href="#" style="background: #000"></a></li>
+
+    							<li><a href="#" style="background: #00b0f0"></a></li>
+
+    							<li><a href="#" style="background: #00b050"></a></li>
+
+    						</ul>
+
+    					</div>
+
+    					<div class="logout">
+
+    						<a href="#">خروج</a>
+
+    					</div>
+
+    				</div>
+
+    			</div>
+
+    		</div>
+
+    	</header>
+
+    	<main>
+
+    		<div class="container-fluid no-padding">
+
+    			<div class="row no-margin flex-container">
+
+    				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 no-padding item-col">
+
+    					<div class="col-container">
+
+    						<nav class="navbar navbar-default">
+
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-0" aria-expanded="false">
+
+        <span class="sr-only">Toggle navigation</span>
+
+        <span class="icon-bar"></span>
+
+        <span class="icon-bar"></span>
+
+        <span class="icon-bar"></span>
+
+      </button>
+
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""/></a>
+
+    </div>
+
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-0">
+
+      <ul class="nav navbar-nav links">
+
+       <li><a href="index.html"><i class="fa fa-table"></i><span>الجهات</span></a></li>
+
+        <li><a href="Category.html"><i class="fa fa-bars"></i><span>التصنيفات</span></a></li>
+
+        <li><a href="current.html"><i class="fa fa-tv"></i><span>الحالة الراهنة</span></a></li>
+
+        <li class="active"><a href="tasks.html"><i class="fa fa-list-ol"></i><span>المهام</span></a></li>
+
+        <li><a href="procedures.html"><i class="fa fa-list-ul "></i><span>الإجراءات</span></a></li>
+
+        <li><a href="tasks-mamagment.html"><i class="fa fa-cog"></i><span>إدارة المهام</span></a></li>
+
+        <li><a href="System-constants.html"><i class="fa fa-cogs"></i><span>ثوابت النظام</span></a></li>
+
+      </ul>
+
+     
+
+    </div><!-- /.navbar-collapse -->
+
+</nav>
+
+    					
+
+    						
+
+    					</div>
+
+    				</div><!--col-->
+
+    				<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12  no-padding item-col">
+
+                    <div class="col-scroll">
+
+                    <div class="chart background-blue">
+
+   											<ul>
+
+   												
+
+    <li><a href="#" id="task_success"><p style="background: #92d050; height: 60%"><span>5</span></p></a></li>
+
+    <li><a href="#" id="task_no_started"><p style="background: #00b0f0; height: 50%"><span>3</span></p></a></li>
+
+    <li><a href="#" id="task_inprogress"><p style="background: #ffff00; height: 40%"><span>2</span></p></a></li>
+
+    <li><a href="#" id="task_late"><p style="background: #ff6565; height: 10%"><span>1</span></p></a></li>
+
+   											</ul>
+
+   										</div><!--chart-->
+
+                                        
+
+                                        <div class="hr-border-no-margin"></div>
+
+                    
+
+    					<div>
+
+    						<div class="category col-md-6">
+
+    							<nav class="navbar navbar-default">
+
+										<div class="navbar-header">
+
+												  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+													<span class="sr-only">Toggle navigation</span>
+
+													<span class="icon-bar"></span>
+
+													<span class="icon-bar"></span>
+
+													<span class="icon-bar"></span>
+
+												  </button>
+
+												  <a class="navbar-brand" href="#"> الجهات</a>
+
+												</div>
+
+										<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+												  <ul class="nav navbar-nav links">
+
+                                                  
+
+                                                  <li>
+
+                                                    <a href="#">
+
+                                                        <span></span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>الانجاز والمتابعة</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>التخطيط الاستراتيجي</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>الخصخصة والاستثمار</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>الشئون الإدارية والمالية</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>الشئون الاقتصادية والإحصاء</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>الشئون القانونية</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>تقنية المعلومات</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>وكالة البيئة</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>وكالة التخطيط</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>وكالة الخدمات الزراعية</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>وكالة الزراعة</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>وكالة المياه</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                 <li>
+
+                                                    <a href="#">
+
+                                                        <span>وكالة خدمات المياه</span>
+
+                                                    </a>
+
+                                                </li>
+
+                                                  
+
+												  </ul>
+
+
+
+												</div><!-- /.navbar-collapse -->
+
+								</nav>
+
+   							
+
+    							
+
+    						</div>
+
+                            <div class="category col-lg-6">
+
+    							<nav class="navbar navbar-default">
+
+										<div class="navbar-header">
+
+												  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+
+													<span class="sr-only">Toggle navigation</span>
+
+													<span class="icon-bar"></span>
+
+													<span class="icon-bar"></span>
+
+													<span class="icon-bar"></span>
+
+												  </button>
+
+												  <a class="navbar-brand" href="#"> التصنيفات</a>
+
+												</div>
+
+										<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+												  <ul class="nav navbar-nav links">
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>المجلس</span>
+
+																							<span>(9)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>هيئة الخبراء</span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>المياة</span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>ترشيد النفقات </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>الاستراتيجيات </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>الخصخصة </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>الاستثمار </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>التوظيف </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>العقود </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>الزراعة </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>التشريعات </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>تقنية المعلومات </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+																					<li>
+
+																						<a href="#">
+
+																							<span>البيئة </span>
+
+																							<span>(10)</span>
+
+																						</a>
+
+																					</li>
+
+
+
+												  </ul>
+
+
+
+												</div><!-- /.navbar-collapse -->
+
+								</nav>
+
+   							
+
+    							
+
+    						</div>
+
+    					</div>
+
+                        
+
+                        </div>
+
+    					
+
+                            </div><!--col-->
+
+    				<div class="col-lg-6 col-md-7 col-sm-6 col-xs-12  no-padding item-col col-bg">
+
+    					<div class="container-data">
+
+							<div class="title">
+
+								<ul>
+
+									<li><i class="fa fa-file-text" aria-hidden="true"></i></li>
+
+									<li><span>40 مهمة</span></li>
+
+									<li><span>7 جهات</span></li>
+
+									<li><span>4 تصنيفات</span></li>
+
+								</ul>
+
+							</div><!--title-->
+
+   							<div class="row flex-container">
+
+   							
+
+                            
+
+                     <div class="item-container2 col-lg-10 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 reporter report-red task_late">
+
+                     			<div class="col-lg-9">
+
+   										<div class="">
+
+   											<h2>التقرير الربع سنوي للفوترة</h2>
+
+                                            
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <span>المجلس | الإنجاز والمتابعة</span>
+
+                                            </div>
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <div class="col-lg-6 no-padding">
+
+   											<span> 22-09-1437 |  26-05-11438</span>
+
+                                            </div>
+
+                                            <div class="col-lg-6">
+
+                                                	<a href="#" class="col-lg-5 send">
+
+                                                    </a>
+
+                                                	<a href="procedures.html" class="col-lg-5 view">
+
+                                                    </a>
+
+                                                </div>
+
+                                            
+
+                                            </div>
+
+                                            
+
+                                            	
+
+                                            
+
+   										</div><!--item-title-->
+
+                                </div>
+
+                     			<div id="canvas-holder"   class="col-lg-3">
+
+
+
+                                   <canvas id="task1"  chart-legend="true" />
+
+
+
+                                </div>                              
+
+                                        
+
+                                        
+
+   									</div><!--item-container-->
+
+                                    
+
+                     <div class="item-container2 col-lg-10 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 reporter report-yellow task_inprogress">
+
+                     			<div class="col-lg-9">
+
+   										<div class="">
+
+   											<h2>التقرير الربع سنوي للفوترة</h2>
+
+                                            
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <span>المجلس | الإنجاز والمتابعة</span>
+
+                                            </div>
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <div class="col-lg-6 no-padding">
+
+   											<span> 22-09-1437 |  26-05-11438</span>
+
+                                            </div>
+
+                                            <div class="col-lg-6">
+
+                                                	<a href="#" class="col-lg-5 send">
+
+                                                    </a>
+
+                                                	<a href="procedures.html" class="col-lg-5 view">
+
+                                                    </a>
+
+                                                </div>
+
+                                            
+
+                                            </div>
+
+                                            
+
+                                            	
+
+                                            
+
+   										</div><!--item-title-->
+
+                                </div>
+
+                     			<div id="canvas-holder"   class="col-lg-3">
+
+
+
+                                   <canvas id="task2"  chart-legend="true" />
+
+
+
+                                </div>                            
+
+                                        
+
+                                        
+
+   									</div><!--item-container-->
+
+                                    
+
+                     <div class="item-container2 col-lg-10 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 reporter report-blue task_no_started">
+
+                     			<div class="col-lg-9">
+
+   										<div class="">
+
+   											<h2>التقرير الربع سنوي للفوترة</h2>
+
+                                            
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <span>المجلس | الإنجاز والمتابعة</span>
+
+                                            </div>
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <div class="col-lg-6 no-padding">
+
+   											<span> 22-09-1437 |  26-05-11438</span>
+
+                                            </div>
+
+                                            <div class="col-lg-6">
+
+                                                	<a href="#" class="col-lg-5 send">
+
+                                                    </a>
+
+                                                	<a href="procedures.html" class="col-lg-5 view">
+
+                                                    </a>
+
+                                                </div>
+
+                                            
+
+                                            </div>
+
+                                            
+
+                                            	
+
+                                            
+
+   										</div><!--item-title-->
+
+                                </div>
+
+                     			<div id="canvas-holder"   class="col-lg-3">
+
+
+
+                                   <canvas id="task3"  chart-legend="true" />
+
+
+
+                                </div>                                
+
+                                        
+
+                                        
+
+   									</div><!--item-container-->
+
+
+
+                     <div class="item-container2 col-lg-10 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 reporter report-yellow task_inprogress">
+
+                     			<div class="col-lg-9">
+
+   										<div class="">
+
+   											<h2>التقرير الربع سنوي للفوترة</h2>
+
+                                            
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <span>المجلس | الإنجاز والمتابعة</span>
+
+                                            </div>
+
+   											<div class="col-lg-12 no-padding">
+
+                                            <div class="col-lg-6 no-padding">
+
+   											<span> 22-09-1437 |  26-05-11438</span>
+
+                                            </div>
+
+                                            <div class="col-lg-6">
+
+                                                	<a href="#" class="col-lg-5 send">
+
+                                                    </a>
+
+                                                	<a href="procedures.html" class="col-lg-5 view">
+
+                                                    </a>
+
+                                                </div>
+
+                                            
+
+                                            </div>
+
+                                            
+
+                                            	
+
+                                            
+
+   										</div><!--item-title-->
+
+                                </div>
+
+                     			<div id="canvas-holder"   class="col-lg-3">
+
+
+
+                                   <canvas id="task4"  chart-legend="true" />
+
+
+
+                                </div>                                
+
+                                        
+
+                                        
+
+   									</div><!--item-container-->
+
+
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+   								
+
+   							</div><!--row-->
+
+    					</div><!--container-data-->
+
+    				</div><!--col-->
+
+    			</div><!--row-->
+
+    		</div><!--container-fluid-->
+
+    	</main>	
+
+                 <footer>
+
+        
+
+        <img src="img/evara.png" width="120">
+
+        	<div class="container-fluid">
+
+        		<div class="row">
+
+        			<p>© 2017 EVARA group . All rights reserved</p>
+
+        		</div>
+
+        	</div>
+
+        </footer>
+
+
+
+
+
+         <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        
+        <script type="text/javascript" src="js/func.js"></script>
+         <script src="js/charts/Chart.bundle.js"></script>
+         
+
+    <script src="js/charts/utils.js"></script>
+
+    <script>
+
+	// And for a doughnut chart
+
+	var task1 = document.getElementById('task1').getContext('2d');
+
+	var task2 = document.getElementById('task2').getContext('2d');
+
+	var task3 = document.getElementById('task3').getContext('2d');
+
+	var task4 = document.getElementById('task4').getContext('2d');
+
+var myDoughnutChart = new Chart(task1, {
+
+    type: 'doughnut',
+
+    data:{
+
+			// These labels appear in the legend and in the tooltips when hovering different arcs
+
+	//labels: [ 'منتهية','لم تبدأ', 'تحت الإجراء','متأخرة'],
+
+		 datasets: [{ 
+
+		 //label : '#',
+
+		 data: [90, 10] ,
+
+		 backgroundColor: [
+
+                'rgb(255, 101, 101)',// متأخرة
+
+                'rgb(200, 200, 200)',// gray
+
+            ] ,
+
+			borderWidth: [ 0, 0,0, 0,
+
+            ] ,
+
+       }]
+
+	
+
+		},
+
+   options: {
+
+        legend: {
+
+            display: true,
+
+            labels: {
+
+                fontColor: 'rgb(255, 255, 255)'
+
+            },
+
+			 title: { 
+
+			 display: true,
+
+			  text: 'Custom Chart Title',
+
+        }
+
+     },
+
+	 tooltips: {
+
+  callbacks: {
+
+    label: function(tooltipItem, data) {
+
+      //get the concerned dataset
+
+      var dataset = data.datasets[tooltipItem.datasetIndex];
+
+      //calculate the total of this data set
+
+      var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+
+        return previousValue + currentValue;
+
+      });
+
+      //get the current items value
+
+      var currentValue = dataset.data[tooltipItem.index];
+
+      //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+
+      var precentage = Math.floor(((currentValue/total) * 100)+0.5);
+
+
+
+      return precentage + "%";
+
+    }
+
+  }
+
+} 
+
+	 
+
+}
+
+});
+
+
+
+
+
+var myDoughnutChart = new Chart(task2, {
+
+    type: 'doughnut',
+
+    data:{
+
+			// These labels appear in the legend and in the tooltips when hovering different arcs
+
+	//labels: [ 'منتهية','لم تبدأ', 'تحت الإجراء','متأخرة'],
+
+		 datasets: [{ 
+
+		 //label : '#',
+
+		 data: [65, 10] ,
+
+		 backgroundColor: [
+
+                'rgb(255, 255, 0)',// تحت الإجراء
+
+                'rgb(200, 200, 200)',// gray
+
+            ] ,
+
+			borderWidth: [ 0, 0,0, 0,
+
+            ] ,
+
+       }]
+
+	
+
+		},
+
+   options: {
+
+        legend: {
+
+            display: true,
+
+            labels: {
+
+                fontColor: 'rgb(255, 255, 255)'
+
+            },
+
+			 title: { 
+
+			 display: true,
+
+			  text: 'Custom Chart Title',
+
+        }
+
+     },
+
+	 tooltips: {
+
+  callbacks: {
+
+    label: function(tooltipItem, data) {
+
+      //get the concerned dataset
+
+      var dataset = data.datasets[tooltipItem.datasetIndex];
+
+      //calculate the total of this data set
+
+      var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+
+        return previousValue + currentValue;
+
+      });
+
+      //get the current items value
+
+      var currentValue = dataset.data[tooltipItem.index];
+
+      //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+
+      var precentage = Math.floor(((currentValue/total) * 100)+0.5);
+
+
+
+      return precentage + "%";
+
+    }
+
+  }
+
+} 
+
+	 
+
+}
+
+});
+
+
+
+
+
+var myDoughnutChart = new Chart(task3, {
+
+    type: 'doughnut',
+
+    data:{
+
+			// These labels appear in the legend and in the tooltips when hovering different arcs
+
+	//labels: [ 'منتهية','لم تبدأ', 'تحت الإجراء','متأخرة'],
+
+		 datasets: [{ 
+
+		 //label : '#',
+
+		 data: [40, 10] ,
+
+		 backgroundColor: [
+
+                'rgb(0, 176, 240)',// لم تبدأ
+
+                'rgb(200, 200, 200)',// gray
+
+            ] ,
+
+			borderWidth: [ 0, 0,0, 0,
+
+            ] ,
+
+       }]
+
+	
+
+		},
+
+   options: {
+
+        legend: {
+
+            display: true,
+
+            labels: {
+
+                fontColor: 'rgb(255, 255, 255)'
+
+            },
+
+			 title: { 
+
+			 display: true,
+
+			  text: 'Custom Chart Title',
+
+        }
+
+     },
+
+	 tooltips: {
+
+  callbacks: {
+
+    label: function(tooltipItem, data) {
+
+      //get the concerned dataset
+
+      var dataset = data.datasets[tooltipItem.datasetIndex];
+
+      //calculate the total of this data set
+
+      var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+
+        return previousValue + currentValue;
+
+      });
+
+      //get the current items value
+
+      var currentValue = dataset.data[tooltipItem.index];
+
+      //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+
+      var precentage = Math.floor(((currentValue/total) * 100)+0.5);
+
+
+
+      return precentage + "%";
+
+    }
+
+  }
+
+} 
+
+	 
+
+}
+
+});
+
+
+
+var myDoughnutChart = new Chart(task4, {
+
+    type: 'doughnut',
+
+    data:{
+
+			// These labels appear in the legend and in the tooltips when hovering different arcs
+
+	//labels: [ 'منتهية','لم تبدأ', 'تحت الإجراء','متأخرة'],
+
+		 datasets: [{ 
+
+		 //label : '#',
+
+		 data: [90, 10] ,
+
+		 backgroundColor: [
+
+                'rgb(255, 255, 0)',// تحت الإجراء
+
+                'rgb(200, 200, 200)',// متأخرة
+
+            ] ,
+
+			borderWidth: [ 0, 0,0, 0,
+
+            ] ,
+
+       }]
+
+	
+
+		},
+
+   options: {
+
+        legend: {
+
+            display: true,
+
+            labels: {
+
+                fontColor: 'rgb(255, 255, 255)'
+
+            },
+
+			 title: { 
+
+			 display: true,
+
+			  text: 'Custom Chart Title',
+
+        }
+
+     },
+
+	 tooltips: {
+
+  callbacks: {
+
+    label: function(tooltipItem, data) {
+
+      //get the concerned dataset
+
+      var dataset = data.datasets[tooltipItem.datasetIndex];
+
+      //calculate the total of this data set
+
+      var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+
+        return previousValue + currentValue;
+
+      });
+
+      //get the current items value
+
+      var currentValue = dataset.data[tooltipItem.index];
+
+      //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+
+      var precentage = Math.floor(((currentValue/total) * 100)+0.5);
+
+
+
+      return precentage + "%";
+
+    }
+
+  }
+
+} 
+
+	 
+
+}
+
+});
+
+	</script>
+
+    </body>
+
+</html>
+

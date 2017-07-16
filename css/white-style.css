@@ -1,0 +1,18 @@
+body{ background: #fff;}
+header{ background: #ececec;
+	border-bottom: 1px solid #cecece
+}
+.top-link ul li a {
+    color: #2d3038;
+}
+.item-container{      background: #f7f7f7;
+    border: 1px solid rgba(224, 224, 224, 0.48);
+}
+.item-title{  border-bottom: 1px solid rgba(224, 224, 224, 0.48);}
+.item-title span,.chart ul li span,.guide ul li span{ color: #000}
+footer{ background: #ececec;}
+footer p{ color: #000}
+.menu{    background: #dadada;}
+.menu ul li a{ color: #000;
+    border-bottom: 1px dashed #c3c3c3;
+}

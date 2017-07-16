@@ -1,0 +1,798 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>إدارة المهام</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="css/img/fav-icon.png" />
+
+
+
+        <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&amp;subset=arabic" rel="stylesheet">
+
+
+
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+       <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.min.css"/>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+    </head>
+
+    <body>
+
+    	<header>
+
+    		<div class="container-fluid">
+
+    			<div class="row">
+
+    				<div class="col-md-6">
+
+    					<div class="title-admin">
+
+    						<p>نظام تسجيل ومتابعة المهام الاستراتيجية</p>
+
+    					</div>
+
+    				</div>
+
+    				<div class="col-md-6 text-left">
+
+    					<div class="color">
+
+    						<ul>
+
+    							<li><a href="#" style="background: #000"></a></li>
+
+    							<li><a href="#" style="background: #00b0f0"></a></li>
+
+    							<li><a href="#" style="background: #00b050"></a></li>
+
+    						</ul>
+
+    					</div>
+
+    					<div class="logout">
+
+    						<a href="#">خروج</a>
+
+    					</div>
+
+    				</div>
+
+    			</div>
+
+    		</div>
+
+    	</header>
+
+    	<main>
+
+    		<div class="container-fluid no-padding">
+
+    			<div class="row no-margin flex-container">
+
+    				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12  no-padding item-col">
+
+    					<div class="col-container">
+
+    						<nav class="navbar navbar-default">
+
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-0" aria-expanded="false">
+
+        <span class="sr-only">Toggle navigation</span>
+
+        <span class="icon-bar"></span>
+
+        <span class="icon-bar"></span>
+
+        <span class="icon-bar"></span>
+
+      </button>
+
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""/></a>
+
+    </div>
+
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-0">
+
+      <ul class="nav navbar-nav links">
+
+      <li ><a href="index.html"><i class="fa fa-table"></i><span>الجهات</span></a></li>
+
+        <li ><a href="Category.html"><i class="fa fa-bars"></i><span>التصنيفات</span></a></li>
+
+        <li><a href="current.html"><i class="fa fa-tv"></i><span>الحالة الراهنة</span></a></li>
+
+        <li><a href="tasks.html"><i class="fa fa-list-ol"></i><span>المهام</span></a></li>
+
+        <li><a href="procedures.html"><i class="fa fa-list-ul "></i><span>الإجراءات</span></a></li>
+
+        <li class="active"><a href="tasks-mamagment.html"><i class="fa fa-cog"></i><span>إدارة المهام</span></a></li>
+
+        <li><a href="System-constants.html"><i class="fa fa-cogs"></i><span>ثوابت النظام</span></a></li>
+
+      </ul>
+
+     
+
+    </div><!-- /.navbar-collapse -->
+
+</nav>
+
+    					
+
+    						
+
+    					</div>
+
+    				</div><!--col-->
+
+    				<div class="col-lg-10 col-md-10 col-sm-9 col-xs-12  no-padding item-col col-bg">
+
+    					<div class="container-data">
+
+                        
+
+                        <select class="form-control col-lg-2 form-control-blue margin-rl-10" name="">
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+                        	<option value="">اسم الجهة هنا</option>
+
+               </select>
+
+               
+
+                
+
+                        <select class="form-control col-lg-2 form-control-blue margin-rl-10" name="">
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+                        	<option value="">اسم التصنيف هنا</option>
+
+               </select>
+
+                        
+
+    						<div class="col-lg-7 no-padding">
+
+                            <div class="links links-float">
+
+    							<ul>
+
+    								<li class="col-lg-3 no-padding">
+
+    									<a href="#">
+
+    										<span class="color-box" style="background: #ff6565"></span>
+
+    										<span>مهام متأخرة</span>
+
+    									    <span>(9)</span>
+
+	    								</a>
+
+	    							</li>
+
+	    							<li class="col-lg-3 no-padding">
+
+    									<a href="#">
+
+    										<span class="color-box" style="background: #ffff00"></span>
+
+    										<span>مهام تحت الإجراء</span>
+
+    									    <span>(9)</span>
+
+	    								</a>
+
+	    							</li>
+
+	    							<li class="col-lg-3 no-padding">
+
+    									<a href="#">
+
+    										<span class="color-box" style="background: #00b0f0"></span>
+
+    										<span>مهام لم تبدأ بعد</span>
+
+    									    <span>(8)</span>
+
+	    								</a>
+
+	    							</li>
+
+	    							<li class="col-lg-3 no-padding">
+
+    									<a href="#">
+
+    										<span class="color-box" style="background: #92d050"></span>
+
+    										<span>مهام منتهية</span>
+
+    									    <span>(10)</span>
+
+	    								</a>
+
+	    							</li>
+
+    							</ul>
+
+    						</div><!--link-->
+
+                            </div>
+
+                            
+
+                        
+
+                            <div class="col-lg-12 no-padding-right">
+
+                            
+
+                            	<div class="col-lg-12 table-responsive">
+
+                                
+
+                                	<a href="#" class="report-ico"></a>
+
+                                
+
+                                	<table class="table">
+
+                                    	<thead>
+
+                                        	<th>المهمة</th>
+
+                                        	<th>التصنيف</th>
+
+                                        	<th>الجهه</th>
+
+                                        	<th>نسبة الإنجاز</th>
+
+                                        	<th>الحالة الراهنة</th>
+
+                                        </thead>
+
+                                        <tbody>
+
+                                        <tr>
+
+                                        	<td>وضع لائحة خاصة بالاستثمار</td>
+
+                                        	<td>الاستثمار</td>
+
+                                        	<td>الخصخصة والاستثمار</td>
+
+                                        	<td>50%</td>
+
+                                        	<td>باقي 15 يوماً</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                        	<td>وضع لائحة خاصة بالاستثمار</td>
+
+                                        	<td>الاستثمار</td>
+
+                                        	<td>الخصخصة والاستثمار</td>
+
+                                        	<td>50%</td>
+
+                                        	<td>باقي 15 يوماً</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                        	<td>وضع لائحة خاصة بالاستثمار</td>
+
+                                        	<td>الاستثمار</td>
+
+                                        	<td>الخصخصة والاستثمار</td>
+
+                                        	<td>50%</td>
+
+                                        	<td>باقي 15 يوماً</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                        	<td>وضع لائحة خاصة بالاستثمار</td>
+
+                                        	<td>الاستثمار</td>
+
+                                        	<td>الخصخصة والاستثمار</td>
+
+                                        	<td>50%</td>
+
+                                        	<td>باقي 15 يوماً</td>
+
+                                        </tr>
+
+                               
+
+                                        
+
+                                        
+
+                                        </tbody>
+
+                                    
+
+                                    </table>
+
+                                    
+
+                                    
+
+                                    <div class="col-lg-2 pull-left table-buttons no-padding">
+
+                                    
+
+                                    <button href="#" class="col-lg-3"><i class="fa fa-edit"></i></button>
+
+                                    <button href="#" class="col-lg-3"><i class="fa fa-plus"></i></button>
+
+                                    <button href="#" class="col-lg-3"><i class="fa fa-trash"></i></button>
+
+                                    <button href="#" class="col-lg-3"><i class="fa fa-close"></i></button>
+
+                                    
+
+                                    
+
+                                    </div>
+
+                                
+
+                                
+
+                                </div>
+
+                                
+
+                            
+
+                            </div>
+
+                            
+
+                            
+
+                            
+
+                            <div class="col-lg-12 no-padding-right">
+
+                            
+
+                            	<div class="col-lg-3">
+
+                                
+
+                                <label class="label col-lg-12  text-right">عنوان المهمة</label>
+
+                                
+
+                                <input type="text" rows="3" value="إعداد استراتيجية البيئة" class="form-control col-lg-12 form-control-blue margin-rl-10">
+
+                                
+
+                                
+
+                                <label class="label col-lg-12  text-right">النوع</label>
+
+                                
+
+                                <select class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                                	<option value="">المهام الاستراتيجية</option>
+
+                                	<option value="">المهام الاستراتيجية</option>
+
+                                	<option value="">المهام الاستراتيجية</option>
+
+                                	<option value="">المهام الاستراتيجية</option>
+
+                                
+
+                                </select>
+
+                                
+
+                                
+
+                                 <label class="label col-lg-12 text-right">التصنيف</label>
+
+                                
+
+                                <select class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                                	<option value="">الاستراتيجيات</option>
+
+                                
+
+                                </select>
+
+                                
+
+                                 <label class="label col-lg-12 text-right">كود المهمة</label>
+
+                                
+
+                                <select class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                                	<option value="">--</option>
+
+                                
+
+                                </select>
+
+
+
+                                
+
+                                
+
+                                </div>
+
+                                
+
+                                
+
+                                
+
+                                	<div class="col-lg-3">
+
+                                    
+
+                                     <label class="label col-lg-12  text-right">الجهة</label>
+
+                                
+
+                                <select class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                                	<option value="">وكالة البيئة</option>
+
+                                	<option value="">وكالة البيئة</option>
+
+                                	<option value="">وكالة البيئة</option>
+
+                                	<option value="">وكالة البيئة</option>
+
+                               
+
+                                
+
+                                </select>
+
+                                
+
+                                 <label class="label col-lg-12  text-right">الشخص المسؤول</label>
+
+                                
+
+                                <select class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                       
+
+                                
+
+                                </select>
+
+                                
+
+                                 <label class="label col-lg-12  text-right">المدير المباشر</label>
+
+                                
+
+                                <select class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                                		<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                
+
+                                </select>
+
+                                
+
+                                 <label class="label col-lg-12  text-right">المدير الأعلى</label>
+
+                                
+
+                                <select class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                                		<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                	<option value="">الاسم المرشح هنا</option>
+
+                                
+
+                                </select>
+
+                                
+
+                                
+
+                                </div>
+
+                                
+
+                                
+
+                                
+
+                                	<div class="col-lg-3">
+
+                                    
+
+                                     <label class="label col-lg-12  text-right">تاريخ البداية المخطط</label>
+
+                                
+
+                               <input type="date" class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+
+
+                                 <label class="label col-lg-12  text-right">تاريخ النهاية المخطط</label>
+
+                                
+
+                                 <input type="date" class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+
+
+                                
+
+                                 <label class="label col-lg-12  text-right">تاريخ البداية الفعلي</label>
+
+                                
+
+                                <input type="date" class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                
+
+                              
+
+                                
+
+                                 <label class="label col-lg-12  text-right">تاريخ النهاية الفعلي</label>
+
+                                
+
+                                <input type="date" class="form-control col-lg-12 form-control-blue margin-rl-10" name="">
+
+                                	
+
+                                
+
+                                
+
+                                </div>
+
+                                
+
+                                
+
+                                	<div class="col-lg-3">
+
+                                    
+
+                                    
+
+                                    
+
+                                                                    	<a href="#" class="report-ico"></a>
+
+
+
+                                    
+
+                                    <label class="label col-lg-12  text-right">الأشخاص المرتبطين بالمهمة</label>
+
+                                
+
+                                <textarea style="height:134px;" class="form-control col-lg-12 form-control-blue margin-rl-10"> محمد الحربي  
+
+                                
+
+                                </textarea>
+
+                                
+
+                                
+
+                                <label class="label col-lg-12  text-right">التفاصيل</label>
+
+                                
+
+                                <textarea  style="height:134px;" class="form-control col-lg-12 form-control-blue margin-rl-10">  تتكون المهمة من الإجراءات التالية
+
+                                
+
+                                </textarea>
+
+                                
+
+                                
+
+                                </div>
+
+                            
+
+                            
+
+                            </div>
+
+
+
+                            
+
+   							<div class="row flex-container">
+
+   							
+
+             
+
+   								
+
+   							</div><!--row-->
+
+    					</div><!--container-data-->
+
+    				</div><!--col-->
+
+    			</div><!--row-->
+
+    		</div><!--container-fluid-->
+
+    	</main>	
+
+                <footer>
+
+        
+
+        <img src="img/evara.png" width="120">
+
+        	<div class="container-fluid">
+
+        		<div class="row">
+
+        			<p>© 2017 EVARA group . All rights reserved</p>
+
+        		</div>
+
+        	</div>
+
+        </footer>
+
+
+
+
+
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        
+        <script type="text/javascript" src="js/func.js"></script>
+
+    </body>
+
+</html>
+

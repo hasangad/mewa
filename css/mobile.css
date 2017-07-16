@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td, select, option {
+	border: 0;
+	vertical-align: baseline;
+	float: none;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+:focus {
+	outline: 0;
+}
+a {
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+del {
+	text-decoration: line-through;
+}
+@font-face {
+	font-family: GESS;
+	font-style: oblique;
+	font-weight: bold;
+	src: url('fonts/GESSTwoLight-Light.eot?') format('eot'),  url('fonts/GESSTwoLight-Light.ttf') format('woff'),  url(//:) format('no404'), url('fonts/GESSTwoLight-Light.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: GESS_bold;
+	font-style: oblique;
+	font-weight: bold;
+	src: url('fonts/ge-ss-med.eot?') format('eot'),  url('fonts/ge-ss-med.ttf') format('woff'),  url(//:) format('no404'), url('fonts/ge-ss-med.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Droid Arabic Kufi';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/DroidKufi-Regular.eot);
+	src: url(fonts/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),  url(fonts/DroidKufi-Regular.woff) format('woff')  url(fonts/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Droid Arabic Kufi';
+	font-style: normal;
+	font-weight: 700;
+	src: url(fonts/DroidKufi-Bold.eot);
+	src: url(fonts/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),  url(fonts/DroidKufi-Bold.woff) format('woff'),  url(fonts/DroidKufi-Bold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'NeoSans-bold';
+	src: url('fonts/NeoSans-bold.eot');
+	src: url('fonts/NeoSans-bold.eot?#iefix') format('embedded-opentype'),  url('fonts/NeoSans-bold.woff') format('woff'),  url('fonts/NeoSans-bold.ttf') format('truetype'),  url('fonts/NeoSans-bold.svg#NeoSans-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NeoSans-regular';
+	src: url('fonts/NeoSans-regular.eot');
+	src: url('fonts/NeoSans-regular.eot?#iefix') format('embedded-opentype'),  url('fonts/NeoSans-regular.woff') format('woff'),  url('fonts/NeoSans-regular.ttf') format('truetype'),  url('fonts/NeoSans-regular.svg#NeoSans-regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*-------------selection----------*/
+::-moz-selection {
+background:#0a99d4;
+color: #fff;
+text-shadow: none;
+}
+::selection {
+	background: #0a99d4;
+	color: #fff;
+	text-shadow: none;
+}
+/*---------scroll bar--------*/
+/*
+::-webkit-scrollbar {width: 10px; height:8px; }
+::-webkit-scrollbar-track {background: #FFFFFF;-webkit-box-shadow: inset 1px 1px 2px #E0E0E0;border: 1px solid #D8D8D8;}
+::-webkit-scrollbar-thumb {background: #0093c6;-webkit-box-shadow: inset 1px 1px 2px rgba(155, 155, 155, 0.4);}
+::-webkit-scrollbar-thumb:hover {-webkit-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.3);}
+::-webkit-scrollbar-thumb:active {background: #888;-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);}
+*/
+/*------------placeholder---------------*/
+::-webkit-input-placeholder {
+}
+/*-----------css-----------*/
+body {
+	direction: rtl;
+	font-family: 'Cairo', sans-serif;
+	background: #36404a ;
+
+}
+*{ box-sizing: border-box}
+header{ overflow: hidden;
+height: auto;
+width: 100%;
+display: block;
+background: #232a35;
+	padding: 15px 0;
+}
+.container-mobile{ overflow: hidden;
+height: auto;
+width: 100%;
+padding: 0 15px;
+}
+.top-link{ overflow: hidden;
+height: auto;
+width: 100%;
+display: block;
+}
+.top-link ul{ list-style: none}
+.top-link ul li { display: inline-block}
+.top-link ul li:last-child{ float: left;
+}
+.top-link ul li a{ color: #fff;
+font-size: 14px;
+padding:8px 15px;
+text-decoration: none;
+display: block;
+	    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -transition: all .3s ease-in;
+}
+.top-link ul li a:hover{ color:#549ee2;
+text-decoration: underline;
+	    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -transition: all .3s ease-in;
+}
+.icon-menu{    background: #3f75a7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+	padding: 0;
+	display: block;
+	cursor: pointer;
+	color:#fff;
+    line-height: 40px;
+    text-align: center;
+	    position: relative;
+    z-index: 100;
+	
+}
+.menu{ overflow: hidden;
+height: 100vh;
+width: 200px;
+background: #000;
+	position: absolute;
+	top: 0;
+	left: -200px;
+	padding: 15px;
+	padding-top: 80px;
+	    z-index: 10;
+	 -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -transition: all .3s ease-in;
+}
+.show-menu{ left: 0;
+ -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -transition: all .3s ease-in;
+}
+.mobile-body{ overflow: hidden;
+height: auto;
+width: 100%;
+display: block;
+position: relative;	
+}
+.menu ul{ list-style: none}
+.menu ul li{ display: block}
+.menu ul li a{ display: block;
+color: #fff;
+text-decoration: none;
+font-size: 14px;
+	padding: 10px 0;
+    border-bottom: 1px dashed #232a35;	
+}
+.menu ul li:last-child a{ border-bottom: 0}
+main{ overflow: hidden;
+height: auto;
+width: 100%;
+display: block;
+padding: 10px;
+}
+.col-6{ overflow: hidden;
+height: auto;
+width: 50%;
+padding: 5px;
+float: right;
+}
+
+.item-container{ overflow: hidden;
+height: auto;
+	width: 100%;
+	display: block;
+background: #2d3038;
+}
+.item-title{ overflow: hidden;
+height: auto;
+width: 100%;
+display: block;
+border-bottom: 1px solid rgba(88, 115, 140, 0.38) 	
+}
+.item-title .num{  color: #fff;
+font-size: 16px;
+width: 35px;
+float: left;	
+background: #00b0f0;	
+text-align: center;
+}
+.item-title span{ display: table-cell;
+color: #fff;
+float: right;
+	    font-size: 12px;
+	padding: 7px 10px 5px;
+}
+.chart{ overflow: hidden;
+height: 235px;
+width: 100%;
+display: block;
+padding: 10px;
+}
+.chart ul{ list-style: none}
+.chart ul li{     display: inline-block;
+    padding: 0 3px;
+    height: 235px;
+    position: relative;
+}
+.chart ul li p{    display: block;
+    width: 25px;
+     overflow: hidden;
+    vertical-align: bottom;
+}
+.chart ul li span{width: 25px;
+    margin-bottom: 5px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+.chart ul li:nth-child(1){padding: 0}
+footer{ overflow: hidden;
+height: auto;
+width: 100%;
+display: block;
+text-align: center;
+padding: 15px 0;
+background: #232a35;
+}
+footer p{ color: #fff;
+font-size: 12px;
+}
+.no-padding{ padding: 0}
+.block{ overflow: hidden;
+height: auto;
+width: 100%;
+display: block;
+}
+.color{ display: inline-block;
+width: 20px;
+height: 20px;
+margin: 0 0 0 5px;
+}
+.guide{ overflow: hidden;
+height: auto;
+margin-top: 15px;
+width: 100%;
+display: block;
+text-align: center;
+}
+.guide ul{ list-style: none}
+.guide ul li { display: inline-block;
+margin-left: 10px;}
+.guide ul li span{     display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    vertical-align: middle;
+}
