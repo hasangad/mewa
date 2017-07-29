@@ -45,8 +45,8 @@
     		<div class="container-mobile">
     			<div class="top-link">
     				<ul>
-    					<li><a href="#">الجهات</a></li>
-    					<li><a href="#">التصنيف</a></li>
+    					<li><a href="#" id="entities" class="ActiveLink">الجهات</a></li>
+    					<li><a href="#" id="classification">التصنيف</a></li>
     					<li><a href="#">الحالة</a></li>
     					<li><span class="icon-menu"><i class="fa fa-bars" aria-hidden="true"></i></span></li>
     				</ul>
@@ -75,6 +75,16 @@
     					<li><span class="color" style="background: #ff6565"></span><span>مهام متأخرة</span></li>
     				</ul>
     			</div>
+                <div class="entities">
+                
+                
+                </div>
+                
+                <div class="classification" style="display:none">
+                
+                
+                </div>
+               
     		</div><!--container-mobile-->
     	</main>
     	<footer>
@@ -94,6 +104,20 @@
 			
 		
 $(document).ready(function() {
+	
+	$("#entities").click(function(){
+		$(".classification").hide();
+		$(".entities").show();
+       $("#classification").removeClass('ActiveLink');
+		$(this).addClass('ActiveLink')	});
+	
+	
+	$("#classification").click(function(){
+		$(".entities").hide();
+		$(".classification").show();
+		$("#entities").removeClass('ActiveLink');
+		$(this).addClass('ActiveLink');
+	});
 	
 	
 	$("#inputPassword").keyup(function(e) {
@@ -166,18 +190,76 @@ $(document).ready(function() {
 	 if( TskLateCount == 0) { TskLatePrcntg = 1 };
 	 
 	 
-$(".main_content").append('<div class="col-6"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
-	
-	
-	
- 
+$(".entities").append('<div class="col-6"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
 
 }); 
  
  
  });
- 
+
 });
+
+
+
+
+
+
+  var url ="http://ws.evara.info/api/values/GetAllClassification";
+  $.getJSON(url,function(result){ 
+        //console.log(result);
+ $.each(result, function(i , Ent){
+	 
+	   var url ="http://ws.evara.info/api/values/GetAllTasks";
+  $.getJSON(url,function(result){ 
+  
+ TskSuccessCount = 0 ;
+	TskNotStartedCount = 0 ;
+	TskProccessCount = 0 ;
+	TskLateCount = 0 ;
+        //console.log(result);
+ $.each(result, function(i , Tsk){
+  
+	 /*var Ent.ID = EntID ;
+	 var Tsk.TypeEntityID = TskID ;*/
+	 
+	
+	 if( Ent.ID == Tsk.TypeEntityID ){
+		 
+		 if(Tsk.TaskStatusID == 4) { TskSuccessCount++; }
+		 if(Tsk.TaskStatusID == 3) { TskNotStartedCount++; }
+		 if(Tsk.TaskStatusID == 2) { TskProccessCount++; }
+		 if(Tsk.TaskStatusID == 1) { TskLateCount++; }
+		 		 
+	      }
+		  
+	  });
+	  
+	  //alert(TskSuccessCount);
+	  
+	  var AllTskCount = TskSuccessCount + TskNotStartedCount + TskProccessCount + TskLateCount  ;
+	 
+	 var TskSuccessPrcntg = (TskSuccessCount / AllTskCount) * 100  ;
+	 var TskNotStartedPrcntg = (TskNotStartedCount / AllTskCount )  * 100 ;
+	 var TskProccessPrcntg = (TskProccessCount / AllTskCount )  * 100  ;
+	 var TskLatePrcntg = (TskLateCount / AllTskCount )  * 100 ;
+	 
+	 if( TskSuccessCount == 0) { TskSuccessPrcntg = 1 };
+	 if( TskNotStartedCount == 0) { TskNotStartedPrcntg = 1 };
+	 if( TskProccessCount == 0) { TskProccessPrcntg = 1 };
+	 if( TskLateCount == 0) { TskLatePrcntg = 1 };
+	 
+	 
+$(".classification").append('<div class="col-6"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
+
+}); 
+ 
+ 
+ });
+
+});
+
+
+
 });
 
 			
