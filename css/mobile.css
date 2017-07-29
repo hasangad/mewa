@@ -423,10 +423,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6565', end
     font-size: 24px;
 }
 
-@media (max-width: 250px){
-	
+.ActiveLink { background:#09F !important; color:#ffffff !important; }
 
-.col-6 { width:100%; }	
+/*////////////// REF :: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/  /////////////////*/
 
+/* Portrait */
+/*@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	  
+	  
+}*/
+
+/* Portrait */
+@media only screen and (orientation: portrait) {
+	  
+	  .col-6 { width:100% !important; }	
+
+	  
+}
+
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
 
 }
