@@ -422,9 +422,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6565', end
     font-size: 24px;
 }
 
-@media (max-width: 400px){
+@media (max-width: 250px){
 	
-	
+
+.col-6 { width:100%; }	
 
 
 }
