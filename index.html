@@ -39,76 +39,9 @@
     		</ul>
     	</div>
     	<main>
-    		<div class="container-mobile no-padding">
+    		<div class="container-mobile no-padding main_content">
     			<div class="block">
-    				<div class="col-6">
-    				<div class="item-container">
-   						<div class="item-title">
-   							<span>الإنجاز والمتابعة</span>
-   							<span class="num">14</span>
-   						</div><!--item-title-->
-   						<div class="chart">
-   							<ul>
-   								<li><p style="    height: 205px;    width: 0;"></p></li>
-   								<li><span>5</span><p style="background: #92d050; height: 60%"></p></li>
-   								<li><span>3</span><p style="background: #00b0f0; height: 50%"></p></li>
-   								<li><span>2</span><p style="background: #ffff00; height: 40%"></p></li>
-   								<li><span>1</span><p style="background: #ff6565; height: 10%"></p></li>
-   							</ul>
-   						</div><!--chart-->
-   					</div>
-    			</div><!--col-6-->
-    				<div class="col-6">
-    				<div class="item-container">
-   						<div class="item-title">
-   							<span>الإنجاز والمتابعة</span>
-   							<span class="num">14</span>
-   						</div><!--item-title-->
-   						<div class="chart">
-   							<ul>
-   								<li><p style="    height: 205px;    width: 0;"></p></li>
-   								<li><span>5</span><p style="background: #92d050; height: 60%"></p></li>
-   								<li><span>3</span><p style="background: #00b0f0; height: 50%"></p></li>
-   								<li><span>2</span><p style="background: #ffff00; height: 40%"></p></li>
-   								<li><span>1</span><p style="background: #ff6565; height: 10%"></p></li>
-   							</ul>
-   						</div><!--chart-->
-   					</div>
-    			</div><!--col-6-->
-    				<div class="col-6">
-    				<div class="item-container">
-   						<div class="item-title">
-   							<span>الإنجاز والمتابعة</span>
-   							<span class="num">14</span>
-   						</div><!--item-title-->
-   						<div class="chart">
-   							<ul>
-   								<li><p style="    height: 205px;    width: 0;"></p></li>
-   								<li><span>5</span><p style="background: #92d050; height: 60%"></p></li>
-   								<li><span>3</span><p style="background: #00b0f0; height: 50%"></p></li>
-   								<li><span>2</span><p style="background: #ffff00; height: 40%"></p></li>
-   								<li><span>1</span><p style="background: #ff6565; height: 10%"></p></li>
-   							</ul>
-   						</div><!--chart-->
-   					</div>
-    			</div><!--col-6-->
-    				<div class="col-6">
-    				<div class="item-container">
-   						<div class="item-title">
-   							<span>الإنجاز والمتابعة</span>
-   							<span class="num">14</span>
-   						</div><!--item-title-->
-   						<div class="chart">
-   							<ul>
-   								<li><p style="    height: 205px;    width: 0;"></p></li>
-   								<li><span>5</span><p style="background: #92d050; height: 60%"></p></li>
-   								<li><span>3</span><p style="background: #00b0f0; height: 50%"></p></li>
-   								<li><span>2</span><p style="background: #ffff00; height: 40%"></p></li>
-   								<li><span>1</span><p style="background: #ff6565; height: 10%"></p></li>
-   							</ul>
-   						</div><!--chart-->
-   					</div>
-    			</div><!--col-6-->
+    			
     			</div><!--block-->
     			<div class="guide">
     				<ul>
@@ -134,6 +67,78 @@
 					$(".menu").toggleClass("show-menu");
 				});
 			});
+			
+		
+$(document).ready(function() {
+  /*var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"&pickup_location_id1="+pickup_location_id+"&pickup_date1="+pickup_date+"&pickup_time1="+pickup_time+"&dropoff_location_id1="+dropoff_location_id+"&dropoff_date1="+dropoff_date+"&dropoff_time1="+dropoff_time+"&body_type_id1="+body_type_id+"&fuel_type_id1="+fuel_type_id+"";*/
+  
+  
+    var TskSuccessCount = 0 ;
+		 var TskNotStartedCount = 0 ;
+		 var TskProccessCount = 0 ;
+		 var TskLateCount = 0 ;
+  
+  var url ="http://ws.evara.info/api/values/GetAllEntities";
+  $.getJSON(url,function(result){ 
+        //console.log(result);
+ $.each(result, function(i , Ent){
+	 
+	   var url ="http://ws.evara.info/api/values/GetAllTasks";
+  $.getJSON(url,function(result){ 
+  
+ TskSuccessCount = 0 ;
+	TskNotStartedCount = 0 ;
+	TskProccessCount = 0 ;
+	TskLateCount = 0 ;
+        //console.log(result);
+ $.each(result, function(i , Tsk){
+  
+	 /*var Ent.ID = EntID ;
+	 var Tsk.TypeEntityID = TskID ;*/
+	 
+	
+	 if( Ent.ID == Tsk.TypeEntityID ){
+		 
+		 if(Tsk.TaskStatusID == 4) { TskSuccessCount++; }
+		 if(Tsk.TaskStatusID == 3) { TskNotStartedCount++; }
+		 if(Tsk.TaskStatusID == 2) { TskProccessCount++; }
+		 if(Tsk.TaskStatusID == 1) { TskLateCount++; }
+		 		 
+	      }
+		  
+	  });
+	  
+	  //alert(TskSuccessCount);
+	  
+	  var AllTskCount = TskSuccessCount + TskNotStartedCount + TskProccessCount + TskLateCount  ;
+	 
+	 var TskSuccessPrcntg = (TskSuccessCount / AllTskCount) * 100  ;
+	 var TskNotStartedPrcntg = (TskNotStartedCount / AllTskCount )  * 100 ;
+	 var TskProccessPrcntg = (TskProccessCount / AllTskCount )  * 100  ;
+	 var TskLatePrcntg = (TskLateCount / AllTskCount )  * 100 ;
+	 
+	 if( TskSuccessCount == 0) { TskSuccessPrcntg = 1 };
+	 if( TskNotStartedCount == 0) { TskNotStartedPrcntg = 1 };
+	 if( TskProccessCount == 0) { TskProccessPrcntg = 1 };
+	 if( TskLateCount == 0) { TskLatePrcntg = 1 };
+	 
+	 
+$(".main_content").append('<div class="col-6"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
+	
+	
+	
+ 
+
+}); 
+ 
+ 
+ });
+ 
+});
+});
+
+			
 		</script>
+
     </body>
 </html>
