@@ -16,6 +16,30 @@
         <link rel="stylesheet" type="text/css" href="css/white-style.css" media="all"/>
     </head>
     <body>
+    
+    <div class="container login_page">
+
+
+            <form method="post" action="/Entites" id="form1" class="form-signin col-lg-5 col-lg-offset-3">
+            
+            <h1>نظام تسجيل ومتابعة المهام الاستراتيجية</h1>
+
+            
+   <fieldset class="col-lg-11">
+                    <label for="inputName" class="col-lg-4 label">اسم الستخدم</label>
+                    <input name="inputName" type="text" id="inputName" class="form-control col-lg-8" placeholder="اسم المستخدم" required autofocus>
+                </fieldset>
+                <br>
+                <fieldset class="col-lg-11">
+                    <label for="inputPassword" class="col-lg-4 label">كلمة المرور</label>
+                    <input name="inputPassword" type="password" id="inputPassword" class="form-control col-lg-8" placeholder="كلمة المرور" required>
+                </fieldset>
+                
+ <a href="#" class=" col-lg-8 col-lg-offset-4 no-padding">نسيت كلمة المرور أو اسم المستخدم ؟</a>
+            </form>
+
+        </div>
+    
     	<div class="mobile-body">
     	<header>
     		<div class="container-mobile">
@@ -70,6 +94,25 @@
 			
 		
 $(document).ready(function() {
+	
+	
+	$("#inputPassword").keyup(function(e) {
+		
+        if( ($("#inputName").val() == "admin" ) && ( $('#inputPassword').val() == "123456")) { 
+	
+	//alert('بيانات الدخول صحيحة');
+	//$(".loading_now").fadeIn();
+	//$('.login_btn').removeAttr('disabled');
+	setInterval(function(){
+		 $('.login_page').fadeOut(); }, 700);
+	
+	
+	
+	
+	} else { }
+    });
+	
+
   /*var url="http://app.madadrental.com/send-mail.php?name1="+name+"&email1="+email+"&car_id1="+car_id+"&message1="+message+"&contact1="+contact+"&pickup_location_id1="+pickup_location_id+"&pickup_date1="+pickup_date+"&pickup_time1="+pickup_time+"&dropoff_location_id1="+dropoff_location_id+"&dropoff_date1="+dropoff_date+"&dropoff_time1="+dropoff_time+"&body_type_id1="+body_type_id+"&fuel_type_id1="+fuel_type_id+"";*/
   
   
