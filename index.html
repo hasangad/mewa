@@ -5,7 +5,7 @@
         <title>Index</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="css/img/fav-icon.png" />
+        <link rel="shortcut icon" href="" />
 
         <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&amp;subset=arabic" rel="stylesheet">
@@ -16,6 +16,9 @@
         <link rel="stylesheet" type="text/css" href="css/white-style.css" media="all"/>
     </head>
     <body>
+    <div class="all_white"></div>
+    <div class="loading_now" style="display:none;">
+<b>جار تشفير وتحميل البيانات ...</b></div>
     
     <div class="container login_page">
 
@@ -69,10 +72,10 @@
     			</div><!--block-->
     			<div class="guide">
     				<ul>
-    					<li><span class="color" style="background: #92d050"></span><span>مهام منتهية</span></li>
-    					<li><span class="color" style="background: #00b0f0"></span><span>مهام لم تبدأ بعد</span></li>
-    					<li><span class="color" style="background: #ffff00"></span><span>مهام تحت الإجراء</span></li>
-    					<li><span class="color" style="background: #ff6565"></span><span>مهام متأخرة</span></li>
+    					<li id="task_success"><span class="color" style="background: #92d050"></span><span>مهام منتهية</span></li>
+    					<li id="task_no_started"><span class="color" style="background: #00b0f0"></span><span>مهام لم تبدأ بعد</span></li>
+    					<li id="task_inprogress"><span class="color" style="background: #ffff00"></span><span>مهام تحت الإجراء</span></li>
+    					<li id="task_late"><span class="color" style="background: #ff6565"></span><span>مهام متأخرة</span></li>
     				</ul>
     			</div>
                 <div class="entities">
@@ -97,14 +100,15 @@
         <script type="text/javascript" src="js/bootstrap.js"></script>
         <script>
 			$(document).ready(function(){
+				
+				
 				$(".icon-menu").click(function(){
 					$(".menu").toggleClass("show-menu");
 				});
-			});
-			
-		
-$(document).ready(function() {
+
 	
+	$(".all_white").fadeOut(500);
+
 	$("#entities").click(function(){
 		$(".classification").hide();
 		$(".entities").show();
@@ -190,7 +194,7 @@ $(document).ready(function() {
 	 if( TskLateCount == 0) { TskLatePrcntg = 1 };
 	 
 	 
-$(".entities").append('<div class="col-6"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
+$(".entities").append('<div class="col-6 chart_box"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success viewed"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started viewed"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress viewed"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late viewed"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
 
 }); 
  
@@ -249,12 +253,195 @@ $(".entities").append('<div class="col-6"><div class="item-container"><div class
 	 if( TskLateCount == 0) { TskLatePrcntg = 1 };
 	 
 	 
-$(".classification").append('<div class="col-6"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
+$(".classification").append('<div class="col-6 chart_box"><div class="item-container"><div class="item-title"><span>'+Ent.Name+'<span class="num">'+AllTskCount+'</span></div><!--item-title--><div class="chart"><ul><li class="task_success viewed"><p style="height: '+TskSuccessPrcntg+'%"><span>'+TskSuccessCount+'</span></p></li><li class="task_no_started viewed"><p style="height: '+TskNotStartedPrcntg+'%"><span>'+TskNotStartedCount+'</span></p></li><li class="task_inprogress viewed"><p style="height: '+TskProccessPrcntg+'%"><span>'+TskProccessCount+'</span></p></li><li class="task_late viewed"><p style="height: '+TskLatePrcntg+'%"><span>'+TskLateCount+'</span></p></li></ul></div><!--chart--></div></div><!--col-6-->');
 
 }); 
  
  
  });
+
+});
+
+
+
+var Mnum = "0" ;
+
+
+function check_first_click(Class_is){ 
+
+//alert(Mnum);
+
+	/*if(Mnum == "0") {
+		
+		alert(Mnum);
+		
+		 Mnum = "1" ;
+	
+
+	  
+	  $(".task_late p").css({"height":"10px !important"});
+	  
+	  $(".task_late").removeClass('viewed');
+	  
+	  		
+
+	  
+	   } 
+	   
+	   else{ 
+	   
+	   		alert(Mnum);
+
+	   
+	    Mnum = "0" ; 
+	   
+	    $(Class_is).show();  $(Class_is).addClass('viewed'); 
+ }*/
+
+
+
+
+
+}
+
+
+var num_chart = 0 ;
+
+function check_first_click_charts(){ 
+
+	if(num_chart == 0) { num_chart = 1 ;  $(".chart_box").hide(); } 
+
+
+
+//alert(num);
+
+}
+
+
+function sum_tasks(num_is){
+
+		
+
+	var sum = 0;
+
+    $('.'+num_is+' .chart ul li span').each(function() {
+
+		//alert($(this).html());
+
+        sum += Number($(this).html());
+
+    });
+
+	//alert(sum);
+
+	$('.'+num_is+' .num').html(sum);
+
+	
+
+}
+
+
+
+
+function sum_tasks_by_task() {
+
+	
+		
+
+
+ $(".chart_box").each(function(){
+
+	var sum = 0;
+
+ 
+
+	 $(this).find('ul li.viewed span').each(function() {
+
+		 //alert("YES");
+
+  sum += +$(this).text()||0;
+  
+
+});
+
+
+
+$(this).find(".num").text(sum);
+
+//alert(sum);
+
+
+    });
+	
+	
+
+ }
+
+
+
+$("#task_late").click(function(){
+
+	//check_first_click("task_late");
+
+	check_first_click();
+
+
+	$(this).toggleClass("dactive_link");
+    $(".task_late").toggleClass('viewed');
+    $(".task_late").toggle();
+
+	
+	
+	sum_tasks_by_task();
+
+});
+
+
+$("#task_inprogress").click(function(){
+
+	check_first_click();
+
+	$(this).toggleClass("dactive_link");
+
+    $(".task_inprogress").toggleClass('viewed');
+
+    $(".task_inprogress").toggle();
+
+	sum_tasks_by_task();
+
+});
+
+
+
+
+
+$("#task_no_started").click(function(){
+
+	check_first_click()
+
+	$(this).toggleClass("dactive_link");
+
+    $(".task_no_started").toggleClass('viewed');
+
+    $(".task_no_started").toggle();
+
+	sum_tasks_by_task();
+
+});
+
+
+
+$("#task_success").click(function(){
+
+	check_first_click();
+
+	$(this).toggleClass("dactive_link");
+
+    $(".task_success").toggleClass('viewed');
+
+    $(".task_success").toggle();
+
+	sum_tasks_by_task();
 
 });
 
