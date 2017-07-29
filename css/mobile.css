@@ -93,6 +93,8 @@ text-shadow: none;
 ::-webkit-input-placeholder {
 }
 /*-----------css-----------*/
+
+.login_page { position:fixed; height:100vh; background:#ffffff; width:100%; z-index:99999999; }
 body {
 	direction: rtl;
 	font-family: 'Cairo', sans-serif;
@@ -357,4 +359,72 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', end
 	background: -webkit-linear-gradient(top, #ff6565 0%, #aa0000 99%);
 	background: linear-gradient(to bottom, #ff6565 0%, #aa0000 99%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6565', endColorstr='#aa0000', GradientType=0 );
+}
+
+.login_page h1 {
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-align:center;
+}
+.login_page .logo_login {
+	margin-top:0px;
+}
+.login_page a {
+	margin-top:15px;
+	color: #f4f4f4;
+	display:block;
+}
+.login_page a:hover {
+	color: #F90
+}
+
+.login_page form { margin-top:38%; }
+
+.login_page label {
+	font-family:"Droid Arabic Naskh",tahoma;
+	color:#ffffff;
+	font-size: 18px;
+	font-weight: 700
+}
+.login_page button {
+	background: none;
+	border: none;
+	text-align: right;
+}
+.login_page button i {
+	top: -8px;
+	position: relative;
+}
+.btn-login {
+	height: 30px
+}
+
+.login_page { background:#030; text-align:center }
+
+.login_page button i:before {
+	font-size: 55px;
+	color: #777777
+}
+.login_page button:hover i:before {
+	color: #F90
+}
+
+.img-responsive { width:100%}
+
+.form-control {
+	text-indent:6px;
+       border-radius: 6px;
+    line-height: 28px;
+    height: 38px;
+    border: none;
+    font-size: 24px;
+}
+
+@media (max-width: 400px){
+	
+	
+
+
 }
