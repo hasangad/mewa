@@ -449,6 +449,9 @@ border:3px solid #690;
     display: block;
     text-align: left;
     padding-left: 20px; }
+	
+	
+	.dactive_link span { color:#999999 !important }
 
 
 /*////////////// REF :: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/  /////////////////*/
